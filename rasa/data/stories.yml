@@ -1,0 +1,58 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+##############################
+
+
+- story: edit profile picture
+  steps:
+    - intent: edit_profile
+    - action: utter_edit_profile
+
+- story: track expenses
+  steps:
+    - intent: track_expense
+    - action: utter_track_expense
+
+- story: generate report
+  steps:
+    - intent: generate_report
+    - action: utter_generate_report
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: edit_profile
+  - action: utter_edit_profile
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: nlu_fallback
+  - action: utter_goodbye

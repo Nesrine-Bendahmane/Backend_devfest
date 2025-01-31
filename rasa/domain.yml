@@ -1,0 +1,41 @@
+version: '3.1'
+intents:
+- affirm
+- bot_challenge
+- deny
+- edit_profile
+- generate_report
+- goodbye
+- greet
+- mood_great
+- mood_unhappy
+- nlu_fallback
+- track_expense
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_edit_profile:
+  - text: To edit your profile picture, go to your account settings from the side bar and select 'Edit Profile'.
+  utter_track_expense:
+  - text: You can track your expenses by navigating to the expense tracker under 'Financial Tools'.
+  utter_generate_report:
+  - text: To generate a financial report, go to the 'Reports' section and select the time period.
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+actions:
+- utter_goodbye
+- utter_edit_profile
+- utter_iamabot
+- utter_greet
