@@ -1,0 +1,3 @@
+flask-mysqldb
+Werkzeug
+os
